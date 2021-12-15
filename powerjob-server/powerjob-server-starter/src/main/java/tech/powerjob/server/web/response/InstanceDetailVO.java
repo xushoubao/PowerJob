@@ -58,11 +58,11 @@ public class InstanceDetailVO {
     /**
      * MR或BD任务专用
      */
-    private InstanceDetailVO.TaskDetail taskDetail;
+    private TaskDetail taskDetail;
     /**
      * 秒级任务专用
      */
-    private List<InstanceDetailVO.SubInstanceDetail> subInstanceDetails;
+    private List<SubInstanceDetail> subInstanceDetails;
 
     /**
      * 重试次数
