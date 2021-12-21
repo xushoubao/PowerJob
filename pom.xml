@@ -44,6 +44,8 @@
         <module>powerjob-worker-spring-boot-starter</module>
         <module>powerjob-worker-samples</module>
         <module>powerjob-official-processors</module>
+        <module>datax-admin</module>
+        <module>datax-core</module>
     </modules>
 
     <properties>
