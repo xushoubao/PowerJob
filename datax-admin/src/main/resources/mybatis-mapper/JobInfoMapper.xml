@@ -163,6 +163,56 @@
 		</trim>
 	</select>
 
+	<insert id="insertDataX" parameterType="com.wugui.datax.admin.entity.request.JobInfoRequest" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO job_info (
+			app_id,
+			concurrency,
+			designated_workers,
+			dispatch_strategy,
+			execute_type,
+			extra,
+			gmt_create,
+			gmt_modified,
+			instance_retry_num,
+			instance_time_limit,
+			job_description,
+			job_name,
+			job_params,
+			lifecycle,
+			max_instance_num,
+			max_worker_count,
+			min_cpu_cores,
+			min_disk_space,
+			min_memory_space,
+			next_trigger_time,
+			notify_user_ids,
+			processor_info,
+			processor_type,
+			status,
+			task_retry_num,
+			time_expression,
+			time_expression_type
+		) VALUES (
+		#{appId},
+		#{concurrency},
+		#{designatedWorkers},
+		1,
+		1,
+		#{extra},
+		now(),
+		now(),
+		#{instanceRetryNum},
+		#{instanceTimeLimit},
+		#{jobDescription},
+		#{jobName},
+		#{jobParams},
+		#{lifecycle},
+		#{maxInstanceNum},
+		#{maxWorkerCount}, #{minCpuCores}, #{minDiskSpace}, #{minMemorySpace}, 0, NULL, 'tech.powerjob.official.processors.impl.HttpProcessor', 1, 1, 1, '00 00 02 * * ? *', 2);
+
+
+	</insert>
+
 	<insert id="save" parameterType="com.wugui.datax.admin.entity.JobInfo" useGeneratedKeys="true" keyProperty="id" >
 		INSERT INTO job_info (
 			job_group,
@@ -240,6 +290,8 @@
 			/*SELECT @@IDENTITY AS id*/
 		</selectKey>-->
 	</insert>
+
+
 
 	<select id="loadById" parameterType="java.util.HashMap" resultMap="JobInfo">
 		SELECT <include refid="Base_Column_List" />
@@ -342,4 +394,6 @@
 		inc_start_id = #{incStartId}
 		WHERE id = #{id}
 	</update>
+
+
 </mapper>

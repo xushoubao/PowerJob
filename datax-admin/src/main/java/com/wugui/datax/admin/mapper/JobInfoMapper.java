@@ -1,6 +1,7 @@
 package com.wugui.datax.admin.mapper;
 
 import com.wugui.datax.admin.entity.JobInfo;
+import com.wugui.datax.admin.entity.request.JobInfoRequest;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -57,4 +58,6 @@ public interface JobInfoMapper {
 	public int updateLastHandleCode(@Param("id") int id,@Param("lastHandleCode")int lastHandleCode);
 
     void incrementIdUpdate(@Param("id") int id, @Param("incStartId")Long incStartId);
+
+    int insertDataX(JobInfoRequest request);
 }

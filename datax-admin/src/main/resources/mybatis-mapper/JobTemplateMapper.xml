@@ -71,10 +71,11 @@
 	</sql>
 
 	<select id="pageList" parameterType="java.util.HashMap" resultMap="JobTemplate">
-		SELECT <include refid="Base_Column_List" />,<include refid="Project_Column_List" />
+		SELECT <include refid="Base_Column_List" />
+<!--		,<include refid="Project_Column_List" />-->
 		FROM job_template AS t
-		INNER JOIN job_project p on t.project_id=p.id
-		INNER JOIN job_user u on t.user_id = u.id
+<!--		INNER JOIN job_project p on t.project_id=p.id-->
+<!--		INNER JOIN job_user u on t.user_id = u.id-->
 		<trim prefix="WHERE" prefixOverrides="AND | OR" >
 			<if test="jobGroup gt 0">
 				AND t.job_group = #{jobGroup}

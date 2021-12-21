@@ -24,26 +24,30 @@ public class JobScheduler {
     private static final Logger logger = LoggerFactory.getLogger(JobScheduler.class);
 
 
+//    public void init() throws Exception {
+//        // init i18n
+//        initI18n();
+//
+//        // admin registry monitor run
+//        JobRegistryMonitorHelper.getInstance().start();
+//
+//        // admin monitor run
+//        JobFailMonitorHelper.getInstance().start();
+//
+//        // admin trigger pool start
+//        JobTriggerPoolHelper.toStart();
+//
+//        // admin log report start
+//        JobLogReportHelper.getInstance().start();
+//
+//        // start-schedule
+//        JobScheduleHelper.getInstance().start();
+//
+//        logger.info(">>>>>>>>> init datax-web admin success.");
+//    }
+
     public void init() throws Exception {
-        // init i18n
-        initI18n();
 
-        // admin registry monitor run
-        JobRegistryMonitorHelper.getInstance().start();
-
-        // admin monitor run
-        JobFailMonitorHelper.getInstance().start();
-
-        // admin trigger pool start
-        JobTriggerPoolHelper.toStart();
-
-        // admin log report start
-        JobLogReportHelper.getInstance().start();
-
-        // start-schedule
-        JobScheduleHelper.getInstance().start();
-
-        logger.info(">>>>>>>>> init datax-web admin success.");
     }
 
 
