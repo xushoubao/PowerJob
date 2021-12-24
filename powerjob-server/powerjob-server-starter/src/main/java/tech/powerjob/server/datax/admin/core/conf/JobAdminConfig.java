@@ -50,24 +50,24 @@ public class JobAdminConfig implements InitializingBean, DisposableBean {
     // ---------------------- XxlJobScheduler ----------------------
 
     // conf
-    @Value("${datax.job.i18n}")
-    private String i18n;
-
-    @Value("${datax.job.accessToken}")
-    private String accessToken;
-
-    @Value("${spring.mail.username}")
-    private String emailUserName;
-
-    @Value("${datax.job.triggerpool.fast.max}")
-    private int triggerPoolFastMax;
-
-    @Value("${datax.job.triggerpool.slow.max}")
-    private int triggerPoolSlowMax;
-
-    @Value("${datax.job.logretentiondays}")
-    private int logretentiondays;
-
+//    @Value("${datax.job.i18n}")
+//    private String i18n;
+//
+//    @Value("${datax.job.accessToken}")
+//    private String accessToken;
+//
+//    @Value("${spring.mail.username}")
+//    private String emailUserName;
+//
+//    @Value("${datax.job.triggerpool.fast.max}")
+//    private int triggerPoolFastMax;
+//
+//    @Value("${datax.job.triggerpool.slow.max}")
+//    private int triggerPoolSlowMax;
+//
+//    @Value("${datax.job.logretentiondays}")
+//    private int logretentiondays;
+//
     @Value("${datasource.aes.key}")
     private String dataSourceAESKey;
 
@@ -90,29 +90,29 @@ public class JobAdminConfig implements InitializingBean, DisposableBean {
     @Resource
     private JobDatasourceMapper jobDatasourceMapper;
 
-    public String getI18n() {
-        return i18n;
-    }
+//    public String getI18n() {
+//        return i18n;
+//    }
+//
+//    public String getAccessToken() {
+//        return accessToken;
+//    }
 
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public String getEmailUserName() {
-        return emailUserName;
-    }
-
-    public int getTriggerPoolFastMax() {
-        return triggerPoolFastMax < 200 ? 200 : triggerPoolFastMax;
-    }
-
-    public int getTriggerPoolSlowMax() {
-        return triggerPoolSlowMax < 100 ? 100 : triggerPoolSlowMax;
-    }
-
-    public int getLogretentiondays() {
-        return logretentiondays < 7 ? -1 : logretentiondays;
-    }
+//    public String getEmailUserName() {
+//        return emailUserName;
+//    }
+//
+//    public int getTriggerPoolFastMax() {
+//        return triggerPoolFastMax < 200 ? 200 : triggerPoolFastMax;
+//    }
+//
+//    public int getTriggerPoolSlowMax() {
+//        return triggerPoolSlowMax < 100 ? 100 : triggerPoolSlowMax;
+//    }
+//
+//    public int getLogretentiondays() {
+//        return logretentiondays < 7 ? -1 : logretentiondays;
+//    }
 
 //    public JobLogMapper getJobLogMapper() {
 //        return jobLogMapper;
@@ -149,8 +149,8 @@ public class JobAdminConfig implements InitializingBean, DisposableBean {
     public String getDataSourceAESKey() {
         return dataSourceAESKey;
     }
-
-    public void setDataSourceAESKey(String dataSourceAESKey) {
-        this.dataSourceAESKey = dataSourceAESKey;
-    }
+//
+//    public void setDataSourceAESKey(String dataSourceAESKey) {
+//        this.dataSourceAESKey = dataSourceAESKey;
+//    }
 }

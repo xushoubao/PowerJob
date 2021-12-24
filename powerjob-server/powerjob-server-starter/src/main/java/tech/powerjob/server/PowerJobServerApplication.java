@@ -1,5 +1,6 @@
 package tech.powerjob.server;
 
+import org.mybatis.spring.annotation.MapperScan;
 import tech.powerjob.server.common.utils.PropertyUtils;
 import tech.powerjob.server.remote.transport.starter.AkkaStarter;
 import tech.powerjob.server.remote.transport.starter.VertXStarter;
@@ -17,6 +18,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Slf4j
 @EnableScheduling
 @SpringBootApplication
+@MapperScan(basePackages = {"tech.powerjob.server.datax.admin.mapper"})
 public class PowerJobServerApplication {
 
     private static final String TIPS = "\n\n" +
